@@ -46,7 +46,6 @@ extension HomeViewController: HomeViewControllerInterface {
     }
 
     func setupUI(){
-        self.title = "Home".localized
         UIHelper.hideHUD()
         searchView.setupUI()
         lottieAnimation()

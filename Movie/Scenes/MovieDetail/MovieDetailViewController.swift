@@ -38,11 +38,17 @@ extension MovieDetailViewController: MovieDetailViewControllerInterface {
     
     func fillFields(with data: MovieDetailResponseModel?) {
         guard let data = data else {return}
-        guard let url = URL(string: data.poster ?? "") else {return}
-        self.title = "Detail"
-        let processor = RoundCornerImageProcessor(cornerRadius: 15)
-        posterImageView.kf.indicatorType = .activity
-        posterImageView.kf.setImage(with: url, options: [.processor(processor)])
+        if let poster = data.poster {
+            if poster != "N/A" {
+                let url = URL(string: poster)
+                let processor = RoundCornerImageProcessor(cornerRadius: 15)
+                posterImageView.kf.indicatorType = .activity
+                posterImageView.kf.setImage(with: url, placeholder: UIImage(named: Constants.noImage), options: [.processor(processor)])
+            } else {
+                posterImageView.image = UIImage(named: Constants.noImage)
+            }
+        }
+
         posterImageView.hero.id = "posterImage"
         movieTitleLabel.text = data.title
         movieYearLabel.text = data.year
