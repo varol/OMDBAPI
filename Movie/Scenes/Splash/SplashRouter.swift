@@ -37,6 +37,7 @@ extension SplashRouter: SplashRouterInterface {
     func showHomeScreen() {
         guard let window = viewController?.view.window else { return }
         let vc = HomeRouter.setupModule()
+        vc.title = "Home"
         UIHelper.showHUD()
         let nav = UINavigationController(rootViewController: vc)
         nav.hero.isEnabled = true

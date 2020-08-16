@@ -13,9 +13,10 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.hero.isEnabled = true
-        self.view.heroModifiers = [.useNormalSnapshot]
+        self.view.heroModifiers = [.useNoSnapshot]
+        navigationItem.backBarButtonItem?.title = ""
 //         navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     

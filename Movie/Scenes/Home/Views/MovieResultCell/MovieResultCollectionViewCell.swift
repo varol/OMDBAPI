@@ -20,17 +20,20 @@ class MovieResultCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupSeperatorView()
+    }
+
+    func setupSeperatorView(){
         seperatorView.layer.shadowColor = UIColor.black.cgColor
-        seperatorView.layer.shadowOpacity = 1
+        seperatorView.layer.shadowOpacity = 0.5
         seperatorView.layer.shadowOffset = .zero
-        seperatorView.layer.shadowRadius = 10
+        seperatorView.layer.shadowRadius = 5
     }
 
     func configure(with data: MovieItem?){
         guard let data = data else {return}
         movieTitleLabel.text = data.title
-        
-        
+        moviePosterImageView.hero.id = "posterImage"
         if let poster = data.poster {
             if poster != "N/A" {
                 let url = URL(string: poster)
@@ -41,7 +44,6 @@ class MovieResultCollectionViewCell: UICollectionViewCell {
                 moviePosterImageView.image = UIImage(named: Constants.noImage)
             }
         }
-        moviePosterImageView.hero.id = "posterImage"
         movieYearLabel.text = data.year
         movieGenreLabel.text = data.type?.capitalized
         movieIMDBIDLabel.text = data.imdbID

@@ -36,6 +36,7 @@ extension HomeRouter: HomeRouterInterface {
     func showMovieDetail(with movieID: String?) {
         guard let movieID = movieID else {return}
         let vc = MovieDetailRouter.setupModule()
+        vc.title = "Detail"
         vc.movieID = movieID
         vc.hero.isEnabled = true
         self.viewController?.navigationController?.pushViewController(vc, animated: true)

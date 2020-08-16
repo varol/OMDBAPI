@@ -11,6 +11,7 @@ import UIKit
 class SearchBarView: BaseComponentView {
 
     @IBOutlet weak var searchTextfield: UITextField!
+    @IBOutlet weak var seperatorView: UIView!
     var textfieldChange: ( (String) -> Void )?
 
     override init(frame: CGRect) {
@@ -27,8 +28,15 @@ class SearchBarView: BaseComponentView {
         searchTextfield.attributedPlaceholder = NSAttributedString(string: "Find your favorite movie...",
                                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "LoodosTextColor")!, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .bold)])
         setupTextfield()
+        setupSeperatorView()
     }
     
+    func setupSeperatorView(){
+        seperatorView.layer.shadowColor = UIColor.black.cgColor
+        seperatorView.layer.shadowOpacity = 0.5
+        seperatorView.layer.shadowOffset = .zero
+        seperatorView.layer.shadowRadius = 5
+    }
     func setupTextfield(){
         let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: self.frame.size.width, height: 30)))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)

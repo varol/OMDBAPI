@@ -48,7 +48,6 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="posterImage"/>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                     </subviews>
@@ -284,6 +283,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="F0h-YG-z2p"/>
                                         <constraint firstAttribute="trailing" secondItem="Z1k-kK-x63" secondAttribute="trailing" constant="30" id="Qzj-TN-nrF"/>
+                                        <constraint firstItem="Z1k-kK-x63" firstAttribute="top" secondItem="Cq4-GD-Ku4" secondAttribute="top" constant="22.5" id="WjY-pl-vhj"/>
                                         <constraint firstItem="xvg-Kl-chM" firstAttribute="leading" secondItem="Cq4-GD-Ku4" secondAttribute="leading" id="edt-4D-zwr"/>
                                         <constraint firstItem="Z1k-kK-x63" firstAttribute="centerY" secondItem="8Se-3m-PpG" secondAttribute="centerY" id="guD-uU-4Uf"/>
                                         <constraint firstAttribute="bottom" secondItem="xvg-Kl-chM" secondAttribute="bottom" id="isG-uV-yEe"/>

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchBarView" customModule="Movie" customModuleProvider="target">
             <connections>
                 <outlet property="searchTextfield" destination="wn0-9X-6iF" id="dKl-33-YKr"/>
+                <outlet property="seperatorView" destination="j7D-OF-BXe" id="Bqj-t2-2vA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,7 +27,7 @@
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7D-OF-BXe">
                     <rect key="frame" x="0.0" y="69" width="414" height="1"/>
-                    <color key="backgroundColor" name="LoodosYellow"/>
+                    <color key="backgroundColor" name="LoodosWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="qOE-vs-ADH"/>
                     </constraints>
@@ -69,9 +70,6 @@
         </namedColor>
         <namedColor name="LoodosWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="LoodosYellow">
-            <color red="0.92549019607843142" green="0.72941176470588232" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
