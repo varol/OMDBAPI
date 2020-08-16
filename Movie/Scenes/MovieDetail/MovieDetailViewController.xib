@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="Movie" customModuleProvider="target">
+            <connections>
+                <outlet property="IMDBRatingView" destination="Z1k-kK-x63" id="uRe-gf-As8"/>
+                <outlet property="genreLabel" destination="Y9A-21-n5x" id="wTA-jh-FBr"/>
+                <outlet property="movieTitleLabel" destination="spP-aL-TdV" id="7Yc-0o-IHG"/>
+                <outlet property="movieYearLabel" destination="MTH-Lz-3e6" id="AGS-9C-vcO"/>
+                <outlet property="plotLabel" destination="ir6-AK-jRi" id="3bZ-uN-cqU"/>
+                <outlet property="posterImageView" destination="4Sx-t0-FyJ" id="Q4P-db-6MA"/>
+                <outlet property="releasedLabel" destination="SDh-qE-P7Z" id="Xue-ZC-k7W"/>
+                <outlet property="runtimeLabel" destination="5iw-wf-ywi" id="PYN-LL-EF7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-6o-N01">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zxr-fj-K8C">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-Ic-ILn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spP-aL-TdV" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                            <rect key="frame" x="30" y="30" width="354" height="0.0"/>
+                                            <color key="backgroundColor" name="LoodosWhite"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="textColor" name="LoodosTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-t0-FyJ">
+                                            <rect key="frame" x="0.0" y="60" width="414" height="360"/>
+                                            <color key="backgroundColor" name="LoodosWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="posterImage"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="LoodosWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="spP-aL-TdV" firstAttribute="top" secondItem="ffM-Ic-ILn" secondAttribute="top" constant="30" id="1CD-bA-sSV"/>
+                                        <constraint firstAttribute="trailing" secondItem="4Sx-t0-FyJ" secondAttribute="trailing" id="Gep-Ed-I3g"/>
+                                        <constraint firstAttribute="bottom" secondItem="4Sx-t0-FyJ" secondAttribute="bottom" constant="30" id="Ihc-26-eGg"/>
+                                        <constraint firstItem="spP-aL-TdV" firstAttribute="leading" secondItem="ffM-Ic-ILn" secondAttribute="leading" constant="30" id="OBq-12-N6f"/>
+                                        <constraint firstItem="4Sx-t0-FyJ" firstAttribute="leading" secondItem="ffM-Ic-ILn" secondAttribute="leading" id="TAq-hl-atp"/>
+                                        <constraint firstAttribute="height" constant="450" id="dtB-EK-RvU"/>
+                                        <constraint firstAttribute="trailing" secondItem="spP-aL-TdV" secondAttribute="trailing" constant="30" id="jVd-Ul-16h"/>
+                                        <constraint firstItem="4Sx-t0-FyJ" firstAttribute="top" secondItem="spP-aL-TdV" secondAttribute="bottom" constant="30" id="pYj-hZ-vT4"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="whp-90-MZN">
+                                    <rect key="frame" x="0.0" y="450" width="414" height="134"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QCo-Aw-QlC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="18.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DB0-9p-Awv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="18.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-wE-5k2" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="30" y="0.0" width="95" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                                            <color key="textColor" name="LoodosYellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZl-qc-cf1" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="125" y="0.5" width="5" height="17.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="5" id="yyO-9A-5VC"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="16"/>
+                                                            <color key="textColor" name="LoodosYellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="YZl-qc-cf1" firstAttribute="centerY" secondItem="DB0-9p-Awv" secondAttribute="centerY" id="0yF-jD-H8c"/>
+                                                        <constraint firstAttribute="height" constant="18.5" id="5ei-7L-lHB"/>
+                                                        <constraint firstItem="yUD-wE-5k2" firstAttribute="centerY" secondItem="DB0-9p-Awv" secondAttribute="centerY" id="9Tr-i1-oMj"/>
+                                                        <constraint firstItem="yUD-wE-5k2" firstAttribute="leading" secondItem="DB0-9p-Awv" secondAttribute="leading" constant="30" id="BvP-0z-GaB"/>
+                                                        <constraint firstAttribute="width" constant="130" id="T5z-Ii-oCM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YZl-qc-cf1" secondAttribute="trailing" id="Uz1-lN-8G3"/>
+                                                        <constraint firstItem="YZl-qc-cf1" firstAttribute="leading" secondItem="yUD-wE-5k2" secondAttribute="trailing" id="Zpn-5T-kuv"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year " lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTH-Lz-3e6" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                    <rect key="frame" x="135" y="0.0" width="279" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <color key="textColor" name="LoodosTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MTH-Lz-3e6" firstAttribute="top" secondItem="QCo-Aw-QlC" secondAttribute="top" id="55g-rk-Rmp"/>
+                                                <constraint firstAttribute="bottom" secondItem="MTH-Lz-3e6" secondAttribute="bottom" id="W3h-qn-5NL"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ld0-pn-puP">
+                                            <rect key="frame" x="0.0" y="38.5" width="414" height="18.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1e-l2-1Oy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="18.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5u-hI-PX8" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="30" y="0.0" width="95" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                                            <color key="textColor" name="LoodosYellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t4-gd-ODW" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="125" y="0.5" width="5" height="17.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="5" id="TBl-ld-Xjp"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="16"/>
+                                                            <color key="textColor" name="LoodosYellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="3t4-gd-ODW" secondAttribute="trailing" id="2iK-Bs-SW7"/>
+                                                        <constraint firstItem="3t4-gd-ODW" firstAttribute="leading" secondItem="f5u-hI-PX8" secondAttribute="trailing" id="9rn-qY-vFJ"/>
+                                                        <constraint firstItem="3t4-gd-ODW" firstAttribute="centerY" secondItem="j1e-l2-1Oy" secondAttribute="centerY" id="IS0-9Q-gpY"/>
+                                                        <constraint firstAttribute="width" constant="130" id="SWf-Cv-TbJ"/>
+                                                        <constraint firstItem="f5u-hI-PX8" firstAttribute="leading" secondItem="j1e-l2-1Oy" secondAttribute="leading" constant="30" id="XLI-Lp-VwV"/>
+                                                        <constraint firstAttribute="height" constant="18.5" id="as1-cC-yJf"/>
+                                                        <constraint firstItem="f5u-hI-PX8" firstAttribute="centerY" secondItem="j1e-l2-1Oy" secondAttribute="centerY" id="jog-ur-khK"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year " lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDh-qE-P7Z" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                    <rect key="frame" x="135" y="0.0" width="279" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <color key="textColor" name="LoodosTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="F9p-4g-cFl">
+                                            <rect key="frame" x="0.0" y="77" width="414" height="18.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwQ-hl-F9Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="18.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Runtime" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsi-LO-423" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="30" y="0.0" width="95" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                                            <color key="textColor" name="LoodosYellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8Z-Sl-QQZ" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="125" y="0.5" width="5" height="17.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="5" id="Bx6-nS-oRc"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="16"/>
+                                                            <color key="textColor" name="LoodosYellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Qsi-LO-423" firstAttribute="centerY" secondItem="nwQ-hl-F9Q" secondAttribute="centerY" id="CgH-EI-JV0"/>
+                                                        <constraint firstAttribute="height" constant="18.5" id="Euz-x7-oKX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="D8Z-Sl-QQZ" secondAttribute="trailing" id="GnK-ke-6La"/>
+                                                        <constraint firstItem="Qsi-LO-423" firstAttribute="leading" secondItem="nwQ-hl-F9Q" secondAttribute="leading" constant="30" id="YpY-C6-QTy"/>
+                                                        <constraint firstAttribute="width" constant="130" id="gfC-5x-ELh"/>
+                                                        <constraint firstItem="D8Z-Sl-QQZ" firstAttribute="leading" secondItem="Qsi-LO-423" secondAttribute="trailing" id="n3g-8b-pJB"/>
+                                                        <constraint firstItem="D8Z-Sl-QQZ" firstAttribute="centerY" secondItem="nwQ-hl-F9Q" secondAttribute="centerY" id="ocp-Rw-mri"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year " lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iw-wf-ywi" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                    <rect key="frame" x="135" y="0.0" width="279" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <color key="textColor" name="LoodosTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="u9l-6v-Cjy">
+                                            <rect key="frame" x="0.0" y="115.5" width="414" height="18.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SV-rV-3Mo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="18.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gap-mD-Gnd" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="30" y="0.0" width="95" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                                            <color key="textColor" name="LoodosYellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPS-H9-oDp" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="125" y="0.5" width="5" height="17.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="5" id="cO4-gc-3kU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="16"/>
+                                                            <color key="textColor" name="LoodosYellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="NPS-H9-oDp" secondAttribute="trailing" id="3xd-WY-Z33"/>
+                                                        <constraint firstAttribute="width" constant="130" id="DOK-9T-9rD"/>
+                                                        <constraint firstAttribute="height" constant="18.5" id="M8V-rz-Wma"/>
+                                                        <constraint firstItem="Gap-mD-Gnd" firstAttribute="leading" secondItem="8SV-rV-3Mo" secondAttribute="leading" constant="30" id="VBz-No-x4h"/>
+                                                        <constraint firstItem="NPS-H9-oDp" firstAttribute="centerY" secondItem="8SV-rV-3Mo" secondAttribute="centerY" id="iVb-Xl-osR"/>
+                                                        <constraint firstItem="Gap-mD-Gnd" firstAttribute="centerY" secondItem="8SV-rV-3Mo" secondAttribute="centerY" id="mxF-kO-q9o"/>
+                                                        <constraint firstItem="NPS-H9-oDp" firstAttribute="leading" secondItem="Gap-mD-Gnd" secondAttribute="trailing" id="uUs-nY-twg"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year " lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9A-21-n5x" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                    <rect key="frame" x="135" y="0.0" width="279" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <color key="textColor" name="LoodosTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cq4-GD-Ku4">
+                                    <rect key="frame" x="0.0" y="584" width="414" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvg-Kl-chM">
+                                            <rect key="frame" x="0.0" y="15" width="130" height="35"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbK-sD-X33" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                    <rect key="frame" x="30" y="8.5" width="95" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                                    <color key="textColor" name="LoodosYellow"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Se-3m-PpG" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                                    <rect key="frame" x="125" y="9" width="5" height="17.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="5" id="tNX-OT-XWI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="16"/>
+                                                    <color key="textColor" name="LoodosYellow"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="PtI-sL-S0f"/>
+                                                <constraint firstItem="hbK-sD-X33" firstAttribute="centerY" secondItem="xvg-Kl-chM" secondAttribute="centerY" id="Tp9-2v-paS"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Zvu-eH-4fI"/>
+                                                <constraint firstItem="8Se-3m-PpG" firstAttribute="leading" secondItem="hbK-sD-X33" secondAttribute="trailing" id="k12-1i-fXT"/>
+                                                <constraint firstItem="hbK-sD-X33" firstAttribute="leading" secondItem="xvg-Kl-chM" secondAttribute="leading" constant="30" id="srh-fv-3gv"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Se-3m-PpG" secondAttribute="trailing" id="v5e-gn-ZeH"/>
+                                                <constraint firstItem="8Se-3m-PpG" firstAttribute="centerY" secondItem="xvg-Kl-chM" secondAttribute="centerY" id="vv8-GM-FEm"/>
+                                            </constraints>
+                                        </view>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1k-kK-x63" customClass="CosmosView" customModule="Movie" customModuleProvider="target">
+                                            <rect key="frame" x="135" y="22.5" width="249" height="20"/>
+                                            <color key="backgroundColor" name="LoodosWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" name="LoodosWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="F0h-YG-z2p"/>
+                                        <constraint firstAttribute="trailing" secondItem="Z1k-kK-x63" secondAttribute="trailing" constant="30" id="Qzj-TN-nrF"/>
+                                        <constraint firstItem="xvg-Kl-chM" firstAttribute="leading" secondItem="Cq4-GD-Ku4" secondAttribute="leading" id="edt-4D-zwr"/>
+                                        <constraint firstItem="Z1k-kK-x63" firstAttribute="centerY" secondItem="8Se-3m-PpG" secondAttribute="centerY" id="guD-uU-4Uf"/>
+                                        <constraint firstAttribute="bottom" secondItem="xvg-Kl-chM" secondAttribute="bottom" id="isG-uV-yEe"/>
+                                        <constraint firstItem="Z1k-kK-x63" firstAttribute="leading" secondItem="xvg-Kl-chM" secondAttribute="trailing" constant="5" id="oNk-KZ-GjM"/>
+                                        <constraint firstItem="xvg-Kl-chM" firstAttribute="top" secondItem="Cq4-GD-Ku4" secondAttribute="top" constant="15" id="qvX-uG-Agu"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUq-al-bsn">
+                                    <rect key="frame" x="0.0" y="634" width="414" height="136"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBB-om-AGM" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                            <rect key="frame" x="30" y="20" width="354" height="46.5"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                            <color key="textColor" name="LoodosYellow"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year " lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ir6-AK-jRi" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                                            <rect key="frame" x="30" y="87.5" width="354" height="18.5"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                            <color key="textColor" name="LoodosTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28k-1v-KFg">
+                                            <rect key="frame" x="30" y="71.5" width="354" height="1"/>
+                                            <color key="backgroundColor" name="LoodosYellow"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="8a5-RL-BK0"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" name="LoodosWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="28k-1v-KFg" firstAttribute="leading" secondItem="KUq-al-bsn" secondAttribute="leading" constant="30" id="4ZX-hM-o3H"/>
+                                        <constraint firstItem="ir6-AK-jRi" firstAttribute="leading" secondItem="KUq-al-bsn" secondAttribute="leading" constant="30" id="BTf-HS-zeh"/>
+                                        <constraint firstAttribute="trailing" secondItem="28k-1v-KFg" secondAttribute="trailing" constant="30" id="G8L-bi-gkO"/>
+                                        <constraint firstItem="28k-1v-KFg" firstAttribute="top" secondItem="cBB-om-AGM" secondAttribute="bottom" constant="5" id="LFz-ZY-FhA"/>
+                                        <constraint firstItem="cBB-om-AGM" firstAttribute="leading" secondItem="KUq-al-bsn" secondAttribute="leading" constant="30" id="Lge-nn-dyd"/>
+                                        <constraint firstAttribute="bottom" secondItem="ir6-AK-jRi" secondAttribute="bottom" constant="30" id="RHl-y3-9v0"/>
+                                        <constraint firstItem="cBB-om-AGM" firstAttribute="top" secondItem="KUq-al-bsn" secondAttribute="top" constant="20" id="TOa-e6-9LG"/>
+                                        <constraint firstItem="ir6-AK-jRi" firstAttribute="top" secondItem="28k-1v-KFg" secondAttribute="bottom" constant="15" id="po0-aR-lgF"/>
+                                        <constraint firstAttribute="trailing" secondItem="ir6-AK-jRi" secondAttribute="trailing" constant="30" id="qt5-dV-m69"/>
+                                        <constraint firstAttribute="trailing" secondItem="cBB-om-AGM" secondAttribute="trailing" constant="30" id="uLA-dQ-vdg"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="LoodosWhite"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="LoodosWhite"/>
+                    <constraints>
+                        <constraint firstItem="zxr-fj-K8C" firstAttribute="leading" secondItem="vwz-vI-CSN" secondAttribute="leading" id="678-nX-b08"/>
+                        <constraint firstItem="zxr-fj-K8C" firstAttribute="top" secondItem="vwz-vI-CSN" secondAttribute="top" id="Tdu-wJ-s9R"/>
+                        <constraint firstItem="zxr-fj-K8C" firstAttribute="bottom" secondItem="vwz-vI-CSN" secondAttribute="bottom" id="pIh-gh-BrT"/>
+                        <constraint firstItem="zxr-fj-K8C" firstAttribute="width" secondItem="Ve5-zr-Qej" secondAttribute="width" id="t4a-5V-UBs"/>
+                        <constraint firstItem="zxr-fj-K8C" firstAttribute="trailing" secondItem="vwz-vI-CSN" secondAttribute="trailing" id="wpl-M5-OqS"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="vwz-vI-CSN"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Ve5-zr-Qej"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" name="LoodosWhite"/>
+            <constraints>
+                <constraint firstItem="UiY-6o-N01" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Fm-An-xzX"/>
+                <constraint firstItem="UiY-6o-N01" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KAf-fv-ndI"/>
+                <constraint firstAttribute="bottom" secondItem="UiY-6o-N01" secondAttribute="bottom" id="ohi-TB-92f"/>
+                <constraint firstItem="UiY-6o-N01" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rDz-X7-o1c"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="LoodosTextColor">
+            <color red="0.043000001460313797" green="0.059000000357627869" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoodosWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoodosYellow">
+            <color red="0.92549019607843142" green="0.72941176470588232" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupViewController" customModule="Movie" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="B8b-Q5-GDz" id="peT-Nu-luW"/>
+                <outlet property="messageLabel" destination="nMs-Bh-FxA" id="N0w-0n-rKM"/>
+                <outlet property="titleLabel" destination="4BA-W9-kX7" id="ed6-Le-nQV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tV6-hL-53g">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2132131 123 13123 123123 12312 3123 12312312312" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMs-Bh-FxA" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                            <rect key="frame" x="30" y="83" width="354" height="39.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                            <color key="textColor" name="LoodosTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8b-Q5-GDz">
+                            <rect key="frame" x="30" y="179" width="354" height="55"/>
+                            <color key="backgroundColor" name="LoodosBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="XLU-E9-glB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                            <state key="normal" title="Tamam">
+                                <color key="titleColor" name="LoodosWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="ngA-9W-B3M"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dikkat" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BA-W9-kX7" customClass="BaseLabel" customModule="Movie" customModuleProvider="target">
+                            <rect key="frame" x="30" y="30" width="354" height="23"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                            <color key="textColor" name="LoodosTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="LoodosWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="nMs-Bh-FxA" secondAttribute="trailing" constant="30" id="6ui-pr-Z4O"/>
+                        <constraint firstItem="nMs-Bh-FxA" firstAttribute="leading" secondItem="tV6-hL-53g" secondAttribute="leading" constant="30" id="GfT-jn-nLx"/>
+                        <constraint firstItem="4BA-W9-kX7" firstAttribute="top" secondItem="tV6-hL-53g" secondAttribute="top" constant="30" id="QwL-qE-P8f"/>
+                        <constraint firstItem="nMs-Bh-FxA" firstAttribute="top" secondItem="4BA-W9-kX7" secondAttribute="bottom" constant="30" id="XoR-86-Hvf"/>
+                        <constraint firstAttribute="bottom" secondItem="B8b-Q5-GDz" secondAttribute="bottom" constant="30" id="fU9-rt-GHQ"/>
+                        <constraint firstAttribute="trailing" secondItem="4BA-W9-kX7" secondAttribute="trailing" constant="30" id="g2b-KI-0PY"/>
+                        <constraint firstItem="B8b-Q5-GDz" firstAttribute="leading" secondItem="tV6-hL-53g" secondAttribute="leading" constant="30" id="j28-0F-Z1o"/>
+                        <constraint firstAttribute="height" constant="264" id="lck-7A-Q8r"/>
+                        <constraint firstAttribute="trailing" secondItem="B8b-Q5-GDz" secondAttribute="trailing" constant="30" id="z2K-77-kid"/>
+                        <constraint firstItem="4BA-W9-kX7" firstAttribute="leading" secondItem="tV6-hL-53g" secondAttribute="leading" constant="30" id="zaa-jH-jo6"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tV6-hL-53g" secondAttribute="trailing" id="0mx-Ap-L3j"/>
+                <constraint firstItem="tV6-hL-53g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2L0-Iq-eLR"/>
+                <constraint firstItem="tV6-hL-53g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BHD-fQ-zH0"/>
+                <constraint firstAttribute="bottom" secondItem="tV6-hL-53g" secondAttribute="bottom" id="LPA-N1-szW"/>
+                <constraint firstItem="tV6-hL-53g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mfm-jT-kK4"/>
+                <constraint firstItem="tV6-hL-53g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gLu-mp-bdk"/>
+                <constraint firstAttribute="bottom" secondItem="tV6-hL-53g" secondAttribute="bottom" id="iop-FH-Hsd"/>
+                <constraint firstAttribute="trailing" secondItem="tV6-hL-53g" secondAttribute="trailing" id="w4u-TC-91T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-83.035714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="LoodosBackgroundColor">
+            <color red="0.30588236451148987" green="0.5058823823928833" blue="0.49803921580314636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoodosTextColor">
+            <color red="0.043000001460313797" green="0.059000000357627869" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoodosWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
